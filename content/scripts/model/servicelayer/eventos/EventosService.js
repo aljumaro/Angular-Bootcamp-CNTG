@@ -1,7 +1,7 @@
 ServiceManager.EventosService=(function(){
 
-	function getEventos() {
-		ServiceManager.PersistenceManager.EventoDAORest.getEventos();
+	function getEventos($http, $scope) {
+		ServiceManager.PersistenceManager.EventoDAORest.getEventos($http, $scope);
 		ServiceManager.PersistenceManager.EventoDAOLocalStorage.getEventos();
 	}
 
