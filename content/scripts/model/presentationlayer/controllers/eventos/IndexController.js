@@ -4,6 +4,7 @@ angular.module('app')
 		(function cargasIniciales(){
 			//Inyección de dependencia del $http para desacoplar el "modelo" de angular
 			//Inyección de dependencia del $model para desacoplar el "modelo" de angular
+			//Otro cambio 
 			ServiceManager.EventosService.getEventos($http, $scope);
 		})();
 
