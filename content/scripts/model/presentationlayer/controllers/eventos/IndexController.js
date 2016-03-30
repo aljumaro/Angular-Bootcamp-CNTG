@@ -5,7 +5,6 @@ angular.module('app')
 			//Inyección de dependencia del $http para desacoplar el "modelo" de angular
 			//Inyección de dependencia del $model para desacoplar el "modelo" de angular
 			//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHH
-			//No se porque pero esto esta fatal
 			ServiceManager.EventosService.getEventos($http, $scope);
 		})();
 
