@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body ng-controller="indexController as base">
+
+	<header><h1>{{base.prueba}}</h1></header>
+	<nav>
+		<ul>
+			<li><a ui-sref="home">Home</a></li>
+			<li><a ui-sref="eventos">Eventos</a></li>
+		</ul>
+	</nav>
+	<main id="mainContent">
+		<section ui-view>
+			
+		</section>	
+	</main>
+	<footer>Pie de página</footer>
+	
+	<!--external libraries -->
+	<script src="content/scripts/libraries/angularjs/153/angular.min.js"></script>
+	<script src="content/scripts/libraries/ui-router/0218/angular-ui-router.min.js"></script>
+
+	<!--AppConfig-->
+	<script src="content/scripts/model/presentationlayer/AppConfig.js"></script>
+	<script src="content/scripts/model/presentationlayer/RouteConfig.js"></script>
+
+	<!--PersistenceLayer-->
+	<!--DAO-->
+	<script src="content/scripts/model/persistencelayer/eventos/EventosDAOLocalStorage.js"></script>
+	<script src="content/scripts/model/persistencelayer/eventos/EventosDAORest.js"></script>
+
+	<!--ServiceLayer-->
+	<!--Services-->
+	<script src="content/scripts/model/servicelayer/eventos/EventosService.js"></script>
+
+
+	<!--PresentationLayer-->
+	<!--Controllers-->
+	<script src="content/scripts/model/presentationlayer/controllers/IndexController.js"></script>
+	<script src="content/scripts/model/presentationlayer/controllers/home/IndexController.js"></script>
+	<script src="content/scripts/model/presentationlayer/controllers/eventos/IndexController.js"></script>
+</body>
+</html>
