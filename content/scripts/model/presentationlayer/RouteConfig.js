@@ -1,18 +1,16 @@
-angular.module('app')
-	.config(function($stateProvider, $urlRouterProvider){
+angular.module('app').config(
+	function($routeProvider){
 
-		$urlRouterProvider.otherwise('/');
-
-		$stateProvider
-			.state('home', {
-				url: '/',
-				templateUrl: 'content/views/home/index.html',
-				controller: 'home_indexController as vm'
-			})
-			.state('eventos', {
-				url: '/eventos',
-				templateUrl: 'content/views/eventos/index.html',
-				controller: 'eventos_indexController as vm'
-			});
-
+$routeProvider.
+	when('/',{
+		templateUrl:'content/views/home/index.html',
+		controller:'home_indexController'
+	}).
+		when('/Eventos',{
+		templateUrl:'content/views/eventos/index.html',
+		controller:'eventos_indexController'
+	})
+	.otherwise({
+		redirectTo:'/'
 	});
+});

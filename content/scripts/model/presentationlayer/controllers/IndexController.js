@@ -1,9 +1,9 @@
-angular.module('app')
-	.controller('indexController', [function() {
+angular.module('app').
+controller('indexController',
+		['$scope','$rootScope',
+		function($scope,$rootScope){
 
-		var vm = this;
+				$scope.controlador='indexController';	
+				$scope.persona={nombre:''};	
 
-		vm.prueba = 'indexController';
-
-	
-}]);
+	}]);		

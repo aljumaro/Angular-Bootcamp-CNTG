@@ -1,7 +1,9 @@
-angular.module('app')
-	.controller('home_indexController', [function(){
+angular.module('app').controller('home_indexController',
+	['$scope',function($scope){
 
-		var vm = this;
+			$scope.controlador='home_indexController';
 
-		vm.prueba = 'home_indexController';
+			
+
+
 	}]);

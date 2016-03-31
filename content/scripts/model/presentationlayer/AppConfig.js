@@ -1,5 +1,5 @@
-angular.module('app', ['ui.router']);
+angular.module('app',['ngRoute']);
 
-var ServiceManager = {
-	PersistenceManager: {}
+var ServiceManager={
+	PersistenceManager:{}
 };
